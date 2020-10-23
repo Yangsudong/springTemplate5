@@ -4,23 +4,16 @@ Configuration 2.1//EN"
 "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
 <tiles-definitions>
 
-	<definition name="userTemplate" template="/WEB-INF/views/tiles/layout.jsp">
+	<definition name="home" template="/WEB-INF/views/home.jsp" />
+
+	<definition name="userTemplate"	template="/WEB-INF/views/tiles/layout.jsp">
 		<put-attribute name="header" value="/WEB-INF/views/tiles/header.jsp" />
 		<put-attribute name="content" value="/WEB-INF/views/tiles/content.jsp" />
 	</definition>
-		
-	<!--empty -->
-	<definition name="*.empty" template="/WEB-INF/views/tiles/layoutEmpty.jsp">
-		<put-attribute name="content" value="/WEB-INF/views/{1}.jsp" />
-	</definition>	
 
-	<!--  사용자  -->
+	<!-- 사용자 -->
 	<definition name="*/*" extends="userTemplate">
 		<put-attribute name="content" value="/WEB-INF/views/{1}/{2}.jsp" />
-	</definition>	
-	<definition name="*" extends="userTemplate">
-		<put-attribute name="content" value="/WEB-INF/views/{1}.jsp" />
 	</definition>
-
-
+	
 </tiles-definitions>

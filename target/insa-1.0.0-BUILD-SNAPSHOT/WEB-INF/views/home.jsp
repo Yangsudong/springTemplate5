@@ -7,9 +7,9 @@
 	<title>Home</title>
 </head>
 <body>
+${empVO.firstName } : ${evo.lastName }
 <h1>
-	Hello world!  <spring:message code="message.board.list.mainTitle"/>
-
+	Hello world! 
 </h1>
 
 <P>  The time on the server is ${serverTime}. </P>
